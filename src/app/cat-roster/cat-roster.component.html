@@ -1,0 +1,32 @@
+<ng-container *ngIf="(roster$ | async) as r">
+    <div *ngFor="let cat of r" class="cat-roster-entry-wrapper l2">
+        <div *ngIf="cat === null || cat === undefined" class="cat-roster-entry">
+            <span>No cat yet ;_:</span>
+        </div>
+        <div *ngIf="(cat !== null && cat !== undefined)" class="cat-roster-entry">
+            <div class="cat-picture">
+                <img [src]="cat.pictureBase64" style="width: 50%" />
+            </div>
+            <div class="cat-stats">
+                <strong>Stats:</strong>
+                <br />
+                <span>Strength: <strong>{{cat.stats.strength}}</strong></span>
+                <br />
+                <span>Loudness: <strong>{{cat.stats.loudness}}</strong></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="roster-clear-wrapper l2">
+        <button (click)="clearCats()">
+            Clear Roster? ;_:
+        </button>
+    </div>
+
+    <div *ngIf="(stats$ | async) as s" class="roster-overall-stats l2">
+        <h3>Overall Stats:</h3>
+        <span>Strength: <strong>{{s.strength}}</strong></span>
+        <br />
+        <span>Loudness: <strong>{{s.loudness}}</strong></span>
+    </div>
+</ng-container>

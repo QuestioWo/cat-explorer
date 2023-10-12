@@ -1,0 +1,14 @@
+<div>
+    <div class="accept-buttons-wrapper l2" style="display: block;">
+        <div *ngFor="let i of [0,1,2,3,4,5]" style="display: flex; justify-content: center;">
+            <button (click)="accept(i)" [disabled]="(canAccept() | async)">
+                Accept into {{i}}th position
+            </button>
+        </div>
+    </div>
+    <div class="reject-button-wrapper l2">
+        <button (click)="reject()">
+            {{(canAccept() | async) ? "Move On" : "Reject"}}
+        </button>
+    </div>
+</div>

@@ -1,0 +1,44 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+    --padding-width: .2rem;
+
+    --border-width: .2rem;
+    --border-radius: .5rem;
+    --l1-margin-size: 1vw;
+    --l2-margin-size: .5rem;
+    --l1-colour: lightgrey;
+    --l2-colour: grey;
+    --l3-colour: rgb(75, 75, 75);
+}
+
+.l2 {
+    display:flex;
+
+    border: var(--border-width);
+    border-style: solid;
+    border-color: var(--l3-colour);
+    border-radius: var(--border-radius);
+
+    margin: var(--l2-margin-size);
+    background-color: var(--l2-colour);
+
+    width: calc(100% - (var(--l2-margin-size) * 2) - (var(--padding-width) * 2) - (var(--border-width) * 2));
+ 
+    padding: var(--border-width);
+
+    justify-content: center;
+}
+
+.l1 {
+    border: var(--border-width);
+    border-style: solid;
+    border-color: var(--l2-colour);
+    border-radius: var(--border-radius);
+
+    margin: var(--l1-margin-size);
+    background-color: var(--l1-colour);
+
+    padding: var(--border-width);
+
+    justify-content: center;
+}

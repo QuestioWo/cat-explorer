@@ -1,0 +1,32 @@
+<ng-container *ngIf="(picOrFact$ | async) as data">
+    <div *ngIf="!data.generatedPic" class="factoid l2" style="display: block;">
+        <span>
+            Ah rats, no cats! However, you've learned some wisdom on your travels:
+        </span>
+        <br />
+        <br />
+        <span><i>{{data.fact}}</i></span>
+    </div>
+
+    <div *ngIf="data.generatedPic" class="cat-profile l2" style="display: block;">
+        <div>
+            <span>
+                Crikey! You've stumbled upon a feline. You can add them to your roster, but you can only hold <strong>six</strong> friends!
+            </span>
+            <br />
+            <br />
+        </div>
+        
+        <div style="display: flex; justify-content: center;">
+            <app-blob-img [blob$]="getCatPictureBlob()" style="height: 80vh; max-width: 100%;" />
+        </div>
+        
+        <div>
+            <br />
+            <span><strong>Stats:</strong></span>
+            <br />
+            <span>Strength: <strong>{{data.cat.stats.strength}}</strong></span>
+            <span style="margin-left: 4vw">Loudness: <strong>{{data.cat.stats.loudness}}</strong></span>
+        </div>
+    </div>
+</ng-container>

@@ -1,0 +1,15 @@
+h1 {
+    text-align: center;
+}
+
+.cat-roster-wrapper {
+    width: calc(30vw - (var(--l1-margin-size) * 2) - (var(--padding-width) * 2) - (var(--border-width) * 2));
+}
+
+.random-cat-encounter-wrapper {
+    width: calc(50vw - (var(--l1-margin-size) * 2) - (var(--padding-width) * 2) - (var(--border-width) * 2));
+}
+
+.cat-actions-wrapper {
+    width: calc(20vw - (var(--l1-margin-size) * 2) - (var(--padding-width) * 2) - (var(--border-width) * 2));
+}
