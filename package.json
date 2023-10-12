@@ -1,6 +1,7 @@
 {
   "name": "cat-explorer",
   "version": "0.0.0",
+  "homepage": "questiowo.github.com/cat-explorer",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
