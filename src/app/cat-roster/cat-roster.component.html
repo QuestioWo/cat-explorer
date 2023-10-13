@@ -5,7 +5,7 @@
         </div>
         <div *ngIf="(cat !== null && cat !== undefined)" class="cat-roster-entry">
             <div class="cat-picture">
-                <img [src]="cat.pictureBase64" style="width: 50%" />
+                <img [src]="cat.pictureBase64" style="max-width: 50%; height: fit-content; align-self: center;" />
             </div>
             <div class="cat-stats">
                 <strong>Stats:</strong>
